@@ -1,0 +1,30 @@
+.wrapper
+  .header
+    .header_title
+      = link_to root_path do
+        %img{src:"/assets/Senior-to-do-title.png"}
+    .header_log-in
+      = link_to "ログイン", new_user_session_path, class:"log-in_btn"
+    .header_sign-in
+      = link_to "新規登録", new_user_registration_path, class: "sign-in_btn"
+.main_user_new
+  %img{src:"/assets/ログイン画面.png"}
+  %h2 ログイン
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .field
+      = f.label "メールアドレス"
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+    .field
+      = f.label "パスワード"
+      %br/
+      = f.password_field :password, autocomplete: "current-password"
+    - if devise_mapping.rememberable?
+      .field
+        .check_btn
+          = f.check_box :remember_me
+          = f.label "次回から自動的にログイン"
+    .actions
+      = f.submit "ログイン"
+  .new_registration_screen
+    = render "devise/shared/links"

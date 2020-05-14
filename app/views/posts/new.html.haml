@@ -1,0 +1,22 @@
+.contents_row
+  .container
+    = form_with(model: @post, local: true) do |form|
+      %h3
+        チェックする
+      %label{class:"checkBox1"}
+        = form.check_box :textBox1
+        朝、お薬は飲みましたか？
+      %label{class:"checkBox2"}
+        = form.check_box :textBox2
+        運動は、しましたか？
+      %label{class:"checkBox3"}
+        = form.check_box :textBox3
+        昼、お薬は飲みましたか？
+      %label{class:"checkBox4"}
+        = form.check_box :textBox4
+        歯磨きは、しましたか？
+      %label{class:"checkBox5"}
+        =form.check_box :textBox5
+        夜、お薬は飲みまいしたか？
+      .send
+        = form.submit "送信"

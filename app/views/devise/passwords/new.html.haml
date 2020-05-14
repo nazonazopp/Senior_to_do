@@ -1,0 +1,22 @@
+.wrapper
+  .header
+    .header_title
+      = link_to root_path do
+        %img{src:"/assets/Senior-to-do-title.png"}
+    .header_log-in
+      = link_to "ログイン", new_user_session_path, class:"log-in_btn"
+    .header_sign-in
+      = link_to "新規登録", new_user_registration_path, class: "sign-in_btn"
+.main_user_new
+  %img{src:"/assets/新規登録画面.png"}
+  %h2 パスワードをお忘れですか？
+  = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .field
+      = f.label "メールアドレス"
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+    .actions
+      = f.submit "送信"
+  .new_registration_screen
+    = render "devise/shared/links"
