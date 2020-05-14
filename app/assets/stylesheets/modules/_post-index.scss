@@ -1,0 +1,74 @@
+.reset {
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif; /* 書体もリセットしています。不要であれば削除を */
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* iOSタップ時の挙動を調整 */
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.header_user-name {
+  margin-left: 300px;
+  text-align: center;
+  line-height: 100px;
+  a {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.main_user_index {
+  width: 100%;
+  background-color: white;
+  position: relative;
+  height: calc(100vh - 150px);
+}
+.main_user_index-btns {
+  text-align: center;
+  justify-content: space-between;
+  .button-shadow {
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 300px;
+    width: 100%;
+    margin: 300px auto;
+    background: #447fff; /* 色変更可能 */
+    color: #fff;
+    font-weight: bold;
+    padding: 30px 10px 30px;
+    border-radius: 20px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+    font-size: 30px;
+  }
+  .button-shadow:hover {
+    animation: 1s flash;
+  }
+  .button-shadow:active,
+  .button-shadow:focus {
+    border-bottom-width: 0;
+    margin-top: 5px;
+    background: #ff9300; /* 色変更可能 */
+  }
+
+  @keyframes flash {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

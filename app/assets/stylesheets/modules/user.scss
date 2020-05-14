@@ -1,0 +1,84 @@
+* {
+  font-weight: bold;
+}
+.main_user_new {
+  position: relative;
+  height: 100vh;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+    max-width: inherit;
+    z-index: -3;
+  }
+  h2 {
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px 100px 20px;
+    border: 10px solid red;
+    border-radius: 100px;
+    display: flexbox;
+    .field {
+      label {
+        font-size: 20px;
+      }
+      input {
+        width: 100%;
+        height: 40px;
+        font-size: 50px;
+      }
+    }
+    .actions {
+      margin-top: 80px;
+      text-align: center;
+      input {
+        padding: 20px;
+        background-color: red;
+        border: 5px solid black;
+        color: white;
+        border-radius: 50px;
+        font-size: 20px;
+        width: 100%;
+      }
+    }
+  }
+}
+.new_registration_screen {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  a {
+    display: inline-block;
+    margin-top: 15px;
+    border: 3px solid black;
+    background-color: red;
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+  }
+}
+input {
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.check_btn {
+  input {
+    display: inline;
+  }
+}
