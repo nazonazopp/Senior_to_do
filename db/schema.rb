@@ -14,11 +14,11 @@ ActiveRecord::Schema.define(version: 2020_05_08_101426) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
-    t.boolean "textBox1"
-    t.boolean "textBox2"
-    t.boolean "textBox3"
-    t.boolean "textBox4"
-    t.boolean "textBox5"
+    t.integer "textBox1"
+    t.integer "textBox2"
+    t.integer "textBox3"
+    t.integer "textBox4"
+    t.integer "textBox5"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"

@@ -3,19 +3,19 @@
     = form_with(model: @post, local: true) do |form|
       %h3
         チェックする
-      %label{class:"checkBox1"}
+      %label{class:"checkBox1",checked_value:"1", unchecked_value:"0"}
         = form.check_box :textBox1
         朝、お薬は飲みましたか？
-      %label{class:"checkBox2"}
+      %label{class:"checkBox2",checked_value:"1", unchecked_value:"0"}
         = form.check_box :textBox2
         運動は、しましたか？
-      %label{class:"checkBox3"}
+      %label{class:"checkBox3",checked_value:"1", unchecked_value:"0"}
         = form.check_box :textBox3
         昼、お薬は飲みましたか？
-      %label{class:"checkBox4"}
+      %label{class:"checkBox4",checked_value:"1", unchecked_value:"0"}
         = form.check_box :textBox4
         歯磨きは、しましたか？
-      %label{class:"checkBox5"}
+      %label{class:"checkBox5",checked_value:"1", unchecked_value:"0"}
         =form.check_box :textBox5
         夜、お薬は飲みまいしたか？
       .send
