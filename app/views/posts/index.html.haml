@@ -1,17 +1,18 @@
+%canvas{id:"canvas"}
+  %script{src:"/assets/background.js"}
 .wrapper
-  .header
-    .header_title
-      = link_to posts_path do
-        %img{src:"/assets/Senior-to-do-title.png"}
-    .header_user-name
-      = link_to edit_user_registration_path do
-        = current_user.name
+  = render "top/header"
   .main_user_index
     .main_user_index-btns
       %a{href: user_path(current_user),class:"reset button-shadow"}
         記録をみる
-      %a{href:"/posts/new",class:"reset button-shadow"}
+      %a{href:comment_path(current_user),class:"reset button-shadow"}
         チェックする
-  .footer
-    .footer-logo
-      Senior-to-do 2020
+  = render "top/footer"
+%script
+  $(".menu-toggle").on('click', function() {
+  $(this).toggleClass("on");
+  $('.menu-section').toggleClass("on");
+  $("nav ul").toggleClass('hidden');
+  });
+

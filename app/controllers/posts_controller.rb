@@ -21,5 +21,4 @@ class PostsController < ApplicationController
     params.require(:post).permit(:textBox1, :textBox2, :textBox3, :textBox4, :textBox5).merge(user_id: current_user.id)
   end
 
-
 end

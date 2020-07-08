@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     hash3 = @post.select(:textBox3).sum(:textBox3)
     hash4 = @post.select(:textBox4).sum(:textBox4)
     hash5 = @post.select(:textBox5).sum(:textBox5)
-   @chart ={ "1:朝、お薬は飲みましたか？" => hash1, "２:運動は、しましたか？" => hash2, "3:昼、お薬は飲みましたか？" => hash3, "4:歯磨きは、しましたか？" => hash4, "5:夜、お薬は飲みまいしたか？" => hash5 }
+   @chart = {やることその１: hash1,やることその２: hash2,やることその３: hash3,やることその４: hash4,やることその５: hash5}
     
    
   end

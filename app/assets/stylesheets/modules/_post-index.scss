@@ -19,7 +19,8 @@
 }
 
 .header_user-name {
-  margin-left: 300px;
+  margin-left: auto;
+  margin-right: 200px;
   text-align: center;
   line-height: 100px;
   a {
@@ -27,17 +28,24 @@
     text-decoration: none;
     color: white;
   }
+  .header__icon {
+    display: contents;
+    a {
+      margin-left: 30px;
+    }
+  }
 }
 
 .main_user_index {
   width: 100%;
-  background-color: white;
+
   position: relative;
   height: calc(100vh - 150px);
 }
 .main_user_index-btns {
   text-align: center;
   justify-content: space-between;
+
   .button-shadow {
     text-align: center;
     box-sizing: border-box;
@@ -69,6 +77,18 @@
     }
     to {
       opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 610px) {
+  .main_user_index {
+    width: 100%;
+    position: relative;
+    height: calc(100vh - 150px);
+    .main_user_index-btns {
+      .button-shadow {
+        margin: 100px;
+      }
     }
   }
 }

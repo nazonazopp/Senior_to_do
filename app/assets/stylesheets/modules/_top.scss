@@ -79,11 +79,143 @@
   height: 50px;
   background-color: red;
   position: fixed;
+  bottom: 0;
   .footer-logo {
-    color: white;
     text-align: center;
     line-height: 50px;
     font-size: 20px;
     font-weight: bold;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.header_min {
+  display: none;
+}
+
+@media screen and (max-width: 1020px) {
+  body {
+    width: 100%;
+    .wrapper {
+      .header {
+        display: none;
+      }
+
+      .main {
+        .main_text {
+          text-align: center;
+          position: absolute;
+          padding: 200px;
+          margin: auto;
+          font-size: 30px;
+          letter-spacing: 5px;
+          text-shadow: 10px 3px 3px black;
+          color: white;
+          font-family: "American Typewriter", "Arial Black", sans-serif;
+          z-index: 3;
+          h6 {
+            font-size: 10px;
+          }
+        }
+
+        video {
+          width: auto;
+          height: calc(100vh - 150px);
+          z-index: 1;
+        }
+      }
+
+      .header_min {
+        width: 100%;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        padding: 0px;
+        display: flex;
+        .menu-section {
+          &.on {
+            z-index: 10;
+
+            height: 100%;
+            display: block;
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+          .menu-toggle {
+            width: 40px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            right: 70px;
+            z-index: 2;
+            cursor: pointer;
+            &.on {
+              .one {
+                -webkit-transform: rotate(45deg) translate(7px, 7px);
+              }
+
+              .two {
+                opacity: 0;
+              }
+
+              .three {
+                -webkit-transform: rotate(-45deg) translate(8px, -10px);
+              }
+            }
+
+            .one,
+            .two,
+            .three {
+              width: 100%;
+              height: 5px;
+              background: white;
+              margin: 6px auto;
+              backface-visibility: hidden;
+              transition-duration: (0.3s);
+            }
+
+            nav {
+              cursor: pointer;
+              ul {
+                padding: 0;
+                font-family: Open Sans;
+                list-style: none;
+                margin: 4em auto;
+                text-align: center;
+                font-size: 10px;
+                margin-right: -50px;
+                background-color: tomato;
+
+                &.hidden {
+                  display: none;
+                }
+
+                li {
+                  margin-left: 0;
+                  margin-right: 0;
+                  cursor: pointer;
+                  width: 100%;
+                  a {
+                    transition-duration: (0.5s);
+                    text-decoration: none;
+                    color: white;
+                    font-size: 20px;
+                    line-height: 1.5;
+                    width: 100%;
+                    display: block;
+                    cursor: pointer;
+                    &:hover {
+                      background-color: rgba(0, 0, 0, 0.5);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

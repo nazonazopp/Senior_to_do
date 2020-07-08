@@ -1,0 +1,68 @@
+.contents__background--image {
+  background-image: linear-gradient(
+      -135deg,
+      rgba(255, 217, 0, 0.555),
+      rgba(195, 0, 255, 0.452)
+    ),
+    url(daniel-hehn-NdkM92CRaxg-unsplash.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center bottom;
+  .contents__text--show {
+    &--form {
+      h3 {
+        text-align: center;
+        border: 20px solid white;
+        color: white;
+        font-size: 70px;
+
+        opacity: 0.8;
+        :hover {
+          background-color: yellow;
+        }
+      }
+      label {
+        display: block;
+        text-align: center;
+        font-size: 50px;
+        color: whitesmoke;
+      }
+      .send {
+        text-align: center;
+        input {
+          background-color: rgb(62, 62, 247);
+          color: white;
+          padding: 30px;
+          font-size: 30px;
+          margin-top: 30px;
+        }
+
+        :hover {
+          background-color: red;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 715px) {
+  .contents__background--image {
+    .contents__text--show {
+      &--form {
+        h3 {
+          font-size: 10px;
+          color: white;
+        }
+        label {
+          margin-top: 20px;
+          color: white;
+          font-size: 20px;
+        }
+        input {
+          height: 50px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.contents__text {
+  display: block;
+  .text {
+    position: relative;
+    form {
+      display: grid;
+      text-align: center;
+      h3 {
+        font-size: 100px;
+        color: white;
+        background-color: tomato;
+        opacity: 0.9;
+      }
+      label {
+        margin-top: 30px;
+        color: white;
+        input {
+          height: 50px;
+          border-radius: 10px;
+        }
+      }
+    }
+    .send {
+      padding: 30px;
+      font-size: 30px;
+
+      input {
+        padding: 20px;
+        background-color: brown;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover {
+          background: #03a9f4;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .contents__text {
+    .text {
+      form {
+        display: grid;
+        text-align: center;
+        h3 {
+          font-size: 50px;
+          color: white;
+          background-color: tomato;
+          opacity: 0.9;
+        }
+        label {
+          margin-top: 40px;
+          color: white;
+          input {
+            height: 50px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}

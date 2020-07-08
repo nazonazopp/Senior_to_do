@@ -1,0 +1,24 @@
+%canvas{id:"canvas"}
+  %script{src:"/assets/background.js"}
+.contents__text
+  .text
+    = form_with(model: @comments, local: true) do |form|
+      %h3
+        やることリスト
+      %label{class:"checkBox1comment"} 
+        やることその１
+        = form.text_field :textBox1comment, autofocus: true
+      %label{class:"checkBox2comment"} 
+        やることその2
+        = form.text_field :textBox2comment
+      %label{class:"checkBox3comment"} 
+        やることその3
+        = form.text_field :textBox3comment
+      %label{class:"checkBox4comment"} 
+        やることその4
+        = form.text_field :textBox4comment
+      %label{class:"checkBox5comment"} 
+        やることその5
+        = form.text_field :textBox5comment
+      .send
+        = form.submit "更新"

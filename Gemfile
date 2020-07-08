@@ -65,3 +65,5 @@ gem 'haml-rails'
 
 gem 'devise'
 gem 'chartkick'
+gem "jquery-rails"
+gem 'font-awesome-sass'
