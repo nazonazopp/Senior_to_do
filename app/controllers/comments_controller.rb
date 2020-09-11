@@ -16,6 +16,10 @@ class CommentsController < ApplicationController
     @comments = Comment.find(params[:id])
     @comments.update(comment_params)
   end
+
+  def comment_show1
+    return @comments.find(1)
+  end
   private
   def comment_params
     params.require(:comment).permit(:textBox1comment, :textBox2comment, :textBox3comment, :textBox4comment, :textBox5comment).merge(user_id: current_user.id)

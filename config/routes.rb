@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "top#index"
     resources :posts, only: [:index ,:create, :new]
     resources :comments, only: [:create, :new, :edit, :show, :update]
-    resources :users, only: [:show, :edit, :update]do
+    resources :users, only: [:new,:create,:show, :edit, :update]do
       member do
         delete 'destroy_all'
       end

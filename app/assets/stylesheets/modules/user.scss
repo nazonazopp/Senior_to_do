@@ -1,9 +1,15 @@
 * {
   font-weight: bold;
 }
+
 .main_user_new {
   position: relative;
   height: 100vh;
+  .sign_up_continer_if {
+    h2 {
+      font-size: 15px;
+    }
+  }
   img {
     position: absolute;
     top: 0;
@@ -50,7 +56,7 @@
     }
 
     .actions {
-      margin-top: 80px;
+      margin-top: 20px;
       text-align: center;
       input {
         padding: 20px;

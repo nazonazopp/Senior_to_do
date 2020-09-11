@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_action :sign_in_required, only: [:index]
   
-  
   def index
   end
 
@@ -12,9 +11,6 @@ class PostsController < ApplicationController
   def create  
     Post.create(post_params)
   end
-
-  
-
 
   private
   def post_params
