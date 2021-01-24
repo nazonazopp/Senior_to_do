@@ -1,22 +1,24 @@
+%canvas{id:"canvas"}
+  %script{src:"/assets/background.js"}
 .contents_row
   .container
-    = form_with(model: @post, local: true) do |form|
+    = form_with(model: [@post], local: true) do |form|
       %h3
         チェックする
-      %label{class:"checkBox1",checked_value:"1", unchecked_value:"0"}
+      %label{class:"checkBox1",checked_value:"1", unchecked_value:"0"} 
         = form.check_box :textBox1
-        朝、お薬は飲みましたか？
+        やることその1
       %label{class:"checkBox2",checked_value:"1", unchecked_value:"0"}
         = form.check_box :textBox2
-        運動は、しましたか？
+        やることその２
       %label{class:"checkBox3",checked_value:"1", unchecked_value:"0"}
         = form.check_box :textBox3
-        昼、お薬は飲みましたか？
+        やることその３
       %label{class:"checkBox4",checked_value:"1", unchecked_value:"0"}
         = form.check_box :textBox4
-        歯磨きは、しましたか？
+        やることその４
       %label{class:"checkBox5",checked_value:"1", unchecked_value:"0"}
         =form.check_box :textBox5
-        夜、お薬は飲みまいしたか？
+        やることその５
       .send
         = form.submit "送信"

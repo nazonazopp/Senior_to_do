@@ -40,10 +40,14 @@ $border-color-hover: $color-red-back;
 }
 
 .data_show {
+  position: relative;
+  background-color: white;
+  opacity: 0.9;
   h1 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 30px;
+    position: relative;
   }
 }
 

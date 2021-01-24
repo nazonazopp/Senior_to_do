@@ -1,0 +1,43 @@
+.header
+  .header_title
+    = link_to root_path do
+      %img{src:"/assets/Senior-to-do-title.png"}
+  - if user_signed_in?
+    .header_user-name
+      = link_to edit_user_registration_path do
+        = current_user.name
+      .reset_btn
+        = link_to posts_path do
+          チェック
+      .header__icon
+        = link_to edit_comment_path(current_user) do
+          設定
+  -else
+    .header_log-in
+      = link_to "ログイン", new_user_session_path, class:"log-in_btn"
+    .header_sign-in
+      = link_to "新規登録", new_user_registration_path, class: "sign-in_btn"
+.header_min
+  .header_title
+    = link_to root_path do
+      %img{src:"/assets/Senior-to-do-title.png"}
+  .menu-section
+    .menu-toggle
+      .one
+      .two
+      .three
+      %nav
+        %ul{role:"navigation", class:"hidden"}
+          - if user_signed_in?
+            %li{class:"header_user-name"}
+              = link_to edit_user_registration_path do
+                = current_user.name
+            %li{class:"reset_btn"}
+              = link_to "チェック", posts_path
+            %li{class:"reset_btn"}
+              = link_to "設定", edit_comment_path(current_user)
+          -else
+            %li
+              %a{href: new_user_session_path} ログイン
+            %li
+              %a{href:new_user_registration_path} 新規登録

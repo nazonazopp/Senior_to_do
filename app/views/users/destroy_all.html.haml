@@ -1,5 +1,7 @@
-.contents.row
+.contents--row
   .success
     %h3
       削除が完了しました。
-    %a.btn{:href => "/posts"} 投稿一覧へ戻る
+    %a.btn{href: posts_path} 投稿一覧へ戻る
+  %canvas{id:"canvas"}
+%script{src:"/assets/background.js"}

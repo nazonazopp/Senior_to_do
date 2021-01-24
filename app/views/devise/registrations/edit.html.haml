@@ -1,15 +1,12 @@
 .wrapper
-  .header
-    .header_title
-      = link_to posts_path do
-        %img{src:"/assets/Senior-to-do-title.png"}
-    .header_user-edit
-      編集画面
-      = link_to posts_path do
-        戻る 
-%video{src:"/assets/mixkit-bunch-of-parsley-4355.mp4",autoplay:"autoplay", loop:"loop", muted: "muted"}
+  =render "top/header"
+  .video-moved
+    %video{src:"/assets/mixkit-bunch-of-parsley-4355.mp4",autoplay:"autoplay", loop:"loop", muted: "muted"}
 .edit_user-form
-  = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+  .edit_user-form__logout
+    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-btn"
+  .edit_user-form__back
+    = link_to "戻る", posts_path,class:"back-btn"
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
     .field
@@ -24,6 +21,10 @@
     - if devise_mapping.confirmable? && resource.pending_reconfirmation?
       %div
         Currently waiting confirmation for: #{resource.unconfirmed_email}
+    .image-face
+      = f.label "顔写真（任意）"
+      %br/
+      = f.file_field :image, autofocus: true
     .field
       = f.label :新しいパスワード
       %br/
@@ -37,4 +38,10 @@
       %br/
       = f.password_field :current_password, autocomplete: "current-password", placeholder:"※必須"
     .actions
-    = f.submit "UPDATE"
+      = f.submit "UPDATE"
+%script
+  $(".menu-toggle").on('click', function() {
+  $(this).toggleClass("on");
+  $('.menu-section').toggleClass("on");
+  $("nav ul").toggleClass('hidden');
+  });

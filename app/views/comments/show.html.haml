@@ -1,0 +1,24 @@
+.contents__background--image
+  .contents__text--show
+    .contents__text--show--form
+      = form_with(url: new_post_path, method: :get ,local: true) do |form|
+        %h3
+          やることリスト
+        %label{class:"checkBox1comment"} 
+          やることその1 :
+          = @comments.textBox1comment
+        %label{class:"checkBox2comment"} 
+          やることその2 :
+          = @comments.textBox2comment
+        %label{class:"checkBox3comment"} 
+          やることその3 :
+          = @comments.textBox3comment
+        %label{class:"checkBox4comment"} 
+          やることその4 :
+          = @comments.textBox4comment
+        %label{class:"checkBox5comment"} 
+          やることその5 :
+          = @comments.textBox5comment
+        .send
+          = form.submit "チェックする"
+  = render "top/footer"

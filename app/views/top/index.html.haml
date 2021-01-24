@@ -1,19 +1,14 @@
 .wrapper
-  .header
-    .header_title
-      = link_to root_path do
-        %img{src:"/assets/Senior-to-do-title.png"}
-    .header_log-in
-      = link_to "ログイン", new_user_session_path, class:"log-in_btn"
-    .header_sign-in
-      = link_to "新規登録", new_user_registration_path, class: "sign-in_btn"
+  = render "header"
   .main
     .main_text
       Check what you did today!
       %h6 今日やったことをチェックしよう！
     %video{src:"/assets/mixkit-sun-rays-pass-through-the-clouds-in-the-mountains-4113.mp4",autoplay:"autoplay", loop:"loop", muted: "muted"}
-  .footer
-    .footer-logo
-      Senior-to-do 2020
-      
-    
+  = render "footer"
+%script
+  $(".menu-toggle").on('click', function() {
+  $(this).toggleClass("on");
+  $('.menu-section').toggleClass("on");
+  $("nav ul").toggleClass('hidden');
+  });

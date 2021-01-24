@@ -1,9 +1,15 @@
 * {
   font-weight: bold;
 }
+
 .main_user_new {
   position: relative;
   height: 100vh;
+  .sign_up_continer_if {
+    h2 {
+      font-size: 15px;
+    }
+  }
   img {
     position: absolute;
     top: 0;
@@ -38,11 +44,19 @@
       input {
         width: 100%;
         height: 40px;
-        font-size: 50px;
+        font-size: 30px;
       }
     }
+    .image-face {
+      width: 100%;
+      font-size: 20px;
+      input {
+        height: 40px;
+      }
+    }
+
     .actions {
-      margin-top: 80px;
+      margin-top: 20px;
       text-align: center;
       input {
         padding: 20px;
@@ -71,10 +85,6 @@
     text-decoration: none;
     color: white;
   }
-}
-input {
-  font-size: 30px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .check_btn {

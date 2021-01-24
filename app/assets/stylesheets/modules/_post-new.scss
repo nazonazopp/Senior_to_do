@@ -1,5 +1,7 @@
 .contents_row {
+  z-index: 300;
   .container {
+    position: relative;
     form {
       text-align: center;
       width: 90%;
@@ -106,12 +108,16 @@
       .send {
         input {
           display: inline-block;
-          padding: 0.5em 1em;
+          padding: 0.9em 15em;
           text-decoration: none;
           background: #668ad8; /*ボタン色*/
           color: #fff;
           border-bottom: solid 4px #627295;
           border-radius: 20px;
+          font-size: 15px;
+          &:hover {
+            background-color: rgba(36, 219, 36, 0.705);
+          }
         }
 
         .send:active {

@@ -1,17 +1,16 @@
+%canvas{id:"canvas"}
+  %script{src:"/assets/background.js"}
 .wrapper
-  .header
-    .header_title
-      = link_to posts_path do
-        %img{src:"/assets/Senior-to-do-title.png"}
-    .header_user-name
-      = link_to edit_user_registration_path do
-        = current_user.name
-      .reset_btn
-        = link_to posts_path do
-          戻る 
+  = render "top/header"
   .data_show
     %h1 達成した記録
     = column_chart @chart ,xtitle: "質問", ytitle: "成功数", label: "成功数"
   .delete_data_btn
-    = link_to '全ての記録したデータを削除',destroy_all_user_path, method: :delete, id:"button"
-
+    = link_to '全ての記録したデータを削除',destroy_all_user_path, method: :delete, id:"button", data: {confirm: "全て記録したデータを削除しますか？"} 
+  = render "top/footer"
+%script
+  $(".menu-toggle").on('click', function() {
+  $(this).toggleClass("on");
+  $('.menu-section').toggleClass("on");
+  $("nav ul").toggleClass('hidden');
+  });
