@@ -8,6 +8,7 @@ Senior-to-do
 # Overview
 
 This is a to-do list for old people.
+
 The feature is that you can check what you do every day and see the results as points.
 
 # Description
@@ -43,11 +44,17 @@ HTML,CSS,jQuery,Ruby,Rails,MySQL
 # Install
 
 $ git clone https://github.com/nazonazopp/Senior_to_do
+
 $ cd helloworld
+
 $ bundle install
+
 $ rails db:create
+
 $ rails db:migrate
+
 $ rails s
+
 http://localhost:3000
 
 # DB 設計
